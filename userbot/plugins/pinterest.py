@@ -1,4 +1,4 @@
-#Created by @MineisZarox
+#Created by @deepaiims
 from urllib import request
 from userbot import catub
 import re
