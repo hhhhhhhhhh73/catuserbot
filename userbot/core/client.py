@@ -1,3 +1,4 @@
+import asyncio
 import datetime
 import inspect
 import re
@@ -7,7 +8,17 @@ from pathlib import Path
 from typing import Dict, List, Union
 
 from telethon import TelegramClient, events
-from telethon.errors import MessageIdInvalidError, MessageNotModifiedError
+from telethon.errors import (
+    AlreadyInConversationError, 
+    BotInlineDisabledError, 
+    BotResponseTimeoutError, 
+    ChatSendInlineForbiddenError, 
+    ChatSendMediaForbiddenError, 
+    ChatSendStickersForbiddenError, 
+    FloodWaitError, 
+    MessageIdInvalidError, 
+    MessageNotModifiedError, 
+)
 
 from ..Config import Config
 from ..helpers.utils.events import checking
