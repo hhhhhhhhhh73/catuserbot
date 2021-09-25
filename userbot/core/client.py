@@ -104,8 +104,9 @@ class CatUserBotClient(TelegramClient):
         def decorator(func):  # sourcery no-metrics
             async def wrapper(check):  # sourcery no-metrics
                 if groups_only and not check.is_group:
-                    await edit_delete(check, "`I don't think this is a group.`", 10)
-                    return
+                    return await edit_delete(
+                        check, "`I don't think this is a group.`", 10
+                    )   
                 if private_only and not check.is_private:
                     await edit_delete(
                         check, "`I don't think this is a personal Chat.`", 10
