@@ -1,4 +1,4 @@
-﻿#Created by @MineisZarox t.me/MineisZarox
+#Created by @deepaiims
 
 import os
 import re
@@ -45,7 +45,7 @@ async def _(event):
         await event.delete()
     else:
         Z = await edit_or_reply(event, "`Downloading...`")
-        MINE = get_download_url(A)
+        DEEP = get_download_url(A)
         await event.delete()
-        await event.client.send_file(event.chat.id, MINE, caption=f"➥Uploaded by = {mention}\n➥Pin = [Link]({A})")
+        await event.client.send_file(event.chat.id, DEEP, caption=f"➥Uploaded by = {mention}\n➥Pin = [Link]({A})")
     
