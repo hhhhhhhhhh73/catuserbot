@@ -40,7 +40,7 @@ async def _(event):
     pattern="endvc$",
     command=("endvc", plugin_category),
     info={
-        "header": "End Voice Chat in a group",
+        "header": "End Voice Chat in group",
         "usage": [
             "{tr}endvc",
         ],
