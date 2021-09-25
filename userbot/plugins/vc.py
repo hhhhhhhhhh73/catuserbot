@@ -1,4 +1,4 @@
-#By @FeelDeD
+#By @deepaiims
 from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.phone import CreateGroupCallRequest
 from telethon.tl.functions.phone import DiscardGroupCallRequest
@@ -6,7 +6,7 @@ from telethon.tl.functions.phone import GetGroupCallRequest
 from telethon.tl.functions.phone import InviteToGroupCallRequest
 from userbot import catub
 
-plugin_category = "useless"
+plugin_category = "extra"
 
 async def getvc(event):
     chat_ = await event.client(GetFullChannelRequest(event.chat_id))
@@ -22,7 +22,7 @@ def all_users(a, b):
     pattern="startvc$",
     command=("startvc", plugin_category),
     info={
-        "header": "Join Voice Chat",
+        "header": "Join Voice Chat in group",
         "usage": [
             "{tr}startvc",
         ],
@@ -40,7 +40,7 @@ async def _(event):
     pattern="endvc$",
     command=("endvc", plugin_category),
     info={
-        "header": "End Voice Chat",
+        "header": "End Voice Chat in a group",
         "usage": [
             "{tr}endvc",
         ],
