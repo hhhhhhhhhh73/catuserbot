@@ -1,4 +1,3 @@
-import asyncio
 import datetime
 import inspect
 import re
@@ -8,17 +7,7 @@ from pathlib import Path
 from typing import Dict, List, Union
 
 from telethon import TelegramClient, events
-from telethon.errors import (
-    AlreadyInConversationError, 
-    BotInlineDisabledError, 
-    BotResponseTimeoutError, 
-    ChatSendInlineForbiddenError, 
-    ChatSendMediaForbiddenError, 
-    ChatSendStickersForbiddenError, 
-    FloodWaitError, 
-    MessageIdInvalidError, 
-    MessageNotModifiedError, 
-)
+from telethon.errors import MessageIdInvalidError, MessageNotModifiedError
 
 from ..Config import Config
 from ..helpers.utils.events import checking
@@ -106,7 +95,7 @@ class CatUserBotClient(TelegramClient):
                 if groups_only and not check.is_group:
                     return await edit_delete(
                         check, "`I don't think this is a group.`", 10
-                    )   
+                    )
                 if private_only and not check.is_private:
                     await edit_delete(
                         check, "`I don't think this is a personal Chat.`", 10
