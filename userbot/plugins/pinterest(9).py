@@ -1,13 +1,16 @@
-#Created by @deepaiims
+# Created by @deepaiims
 
+import asyncio
 import os
 import re
+
 import requests
-import asyncio
+
 from userbot import catub
-from . import mention
+
 from ..core.managers import edit_or_reply
-from urllib import request
+from . import mention
+
 try:
     from pyquery import PyQuery as pq
 except ModuleNotFoundError:
@@ -16,13 +19,19 @@ except ModuleNotFoundError:
 
 plugin_category = "extra"
 
+
 def get_download_url(link):
-    post_request = requests.post('https://www.expertsphp.com/download.php', data={'url': link})
+    post_request = requests.post(
+        "https://www.expertsphp.com/download.php", data={"url": link}
+    )
 
     request_content = post_request.content
-    str_request_content = str(request_content, 'utf-8')
-    download_url = pq(str_request_content)('table.table-condensed')('tbody')('td')('a').attr('href')
+    str_request_content = str(request_content, "utf-8")
+    download_url = pq(str_request_content)("table.table-condensed")("tbody")("td")(
+        "a"
+    ).attr("href")
     return download_url
+
 
 @catub.cat_cmd(
     pattern="pint(?:\s|$)([\s\S]*)",
@@ -40,12 +49,13 @@ async def _(event):
     A = "".join(event.text.split(maxsplit=1)[1:])
     links = re.findall(r"\bhttps?://.*\.\S+", A)
     if not links:
-        L = await edit_or_reply(event, "`Please give a valid link`")
+        await edit_or_reply(event, "`Please give a valid link`")
         await asyncio.sleep(3)
         await event.delete()
     else:
-        Z = await edit_or_reply(event, "`Downloading...`")
+        await edit_or_reply(event, "`Downloading...`")
         DEEP = get_download_url(A)
         await event.delete()
-        await event.client.send_file(event.chat.id, DEEP, caption=f"➥Uploaded by = {mention}\n➥Pin = [Link]({A})")
-    
+        await event.client.send_file(
+            event.chat.id, DEEP, caption=f"➥Uploaded by = {mention}\n➥Pin = [Link]({A})"
+        )

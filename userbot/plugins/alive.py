@@ -1,11 +1,11 @@
-#BY @deepaiims
-#Edited by @deepaiims
-#Thanks to @deepaiims
+# BY @deepaiims
+# Edited by @deepaiims
+# Thanks to @deepaiims
 import random
 import re
 import time
-from platform import python_version
 from datetime import datetime
+from platform import python_version
 
 from telethon import version
 from telethon.events import CallbackQuery
@@ -20,6 +20,8 @@ from . import StartTime, catub, catversion, mention
 plugin_category = "utils"
 
 start = datetime.now()
+
+
 @catub.cat_cmd(
     pattern="alive$",
     command=("alive", plugin_category),
