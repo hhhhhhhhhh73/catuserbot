@@ -1,4 +1,4 @@
-# Ported from Ultroid for pepecat by @kirito6969
+# Ported from Ultroid for @deepaiims
 
 import asyncio
 import os
