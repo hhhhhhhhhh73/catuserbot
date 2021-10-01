@@ -1,4 +1,4 @@
-#By @FeelDeD
+#By @deepaiims
 from ..helpers.utils import reply_id
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from ..core.managers import edit_delete, edit_or_reply
@@ -9,18 +9,18 @@ from . import catub, hmention
 plugin_category = "useless"
 
 @catub.cat_cmd(
-    pattern="wave ?(.*)",
-    command=("wave", plugin_category),
+    pattern="fsong ?(.*)",
+    command=("fsong", plugin_category),
     info={
         "header": "Song downloader",
-        "examples": "{tr}wave Death bed",
+        "examples": "{tr}fsong Death bed",
         "usage": [
-            "{tr}wave <song name>",
+            "{tr}fsong <song name>",
         ],
     },
 )
 async def wave(odi):
-    "Song dl by @FeelDeD"
+    "Song dl by @deepaiims"
     song = "".join(odi.text.split(maxsplit=1)[1:])
     reply_to_id = await reply_id(odi)
     await odi.edit("`Downloading ...`")
