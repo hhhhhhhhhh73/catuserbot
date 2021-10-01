@@ -34,7 +34,7 @@ async def wave(deep):
             await conv.get_response()
             e = await conv.send_message(song)
             message = await conv.get_response()
-            await deep.client.send_file(odi.chat_id, message, reply_to=reply_to_id, caption=False)
+            await deep.client.send_file(deep.chat_id, message, reply_to=reply_to_id, caption=False)
             await deep.delete()
             msgs = []
             for _ in range(s.id, e.id+2): msgs.append(_)
