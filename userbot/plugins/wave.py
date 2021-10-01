@@ -13,33 +13,33 @@ plugin_category = "useless"
     command=("fsong", plugin_category),
     info={
         "header": "Song downloader",
-        "examples": "{tr}fsong Death bed",
+        "examples": "{tr}fsong Humdard",
         "usage": [
             "{tr}fsong <song name>",
         ],
     },
 )
-async def wave(odi):
+async def wave(deep):
     "Song dl by @deepaiims"
-    song = "".join(odi.text.split(maxsplit=1)[1:])
-    reply_to_id = await reply_id(odi)
-    await odi.edit("`Downloading ...`")
+    song = "".join(deep.text.split(maxsplit=1)[1:])
+    reply_to_id = await reply_id(deep)
+    await deep.edit("`Downloading ...`")
     if not song:
-        await edit_delete(odi, "`Give me a song name`")
+        await edit_delete(deep, "`Give me a song name`")
     chat = "@WaveyMusicBot"
-    async with odi.client.conversation(chat) as conv:
+    async with deep.client.conversation(chat) as conv:
         try:
-            await odi.client(functions.contacts.UnblockRequest(conv.chat_id))
+            await deep.client(functions.contacts.UnblockRequest(conv.chat_id))
             s = await conv.send_message('/start')
             await conv.get_response()
             e = await conv.send_message(song)
             message = await conv.get_response()
-            await odi.client.send_file(odi.chat_id, message, reply_to=reply_to_id, caption=False)
-            await odi.delete()
+            await deep.client.send_file(odi.chat_id, message, reply_to=reply_to_id, caption=False)
+            await deep.delete()
             msgs = []
             for _ in range(s.id, e.id+2): msgs.append(_)
-            await odi.client.delete_messages(conv.chat_id, msgs)
-            await odi.client.send_read_acknowledge(conv.chat_id)
+            await deep.client.delete_messages(conv.chat_id, msgs)
+            await deep.client.send_read_acknowledge(conv.chat_id)
         except YouBlockedUserError:
-            await edit_delete(odi, "`Something went wrong .`")
+            await edit_delete(deep, "`Something went wrong .`")
             
