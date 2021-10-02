@@ -141,7 +141,7 @@ async def _(event):
 
 @catub.cat_cmd(
     pattern="les (-s|$)",
-    command=("les", plugin_category),
+    command=("les -s", plugin_category),
     info={
         "header": "To download songs via DeezLoad bot",
         "description": "Spotify/Deezer downloader",
