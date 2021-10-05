@@ -31,23 +31,23 @@ PING_PICS = PING_PICS.rsplit(" ")
 
 # Pre text i.e. before calculation ping
 
-PING_TEXT = os.environ.get("PING_TEXT") or "𝔖𝔱𝔞𝔯𝔱𝔦𝔫𝔤 𝔗𝔥𝔢 𝔊𝔞𝔪𝔢!!"
+PING_TEXT = os.environ.get("PING_TEXT") or "𝕾𝖙𝖆𝖗𝖙𝖎𝖓𝖌 𝖙𝖍𝖊 𝖌𝖆𝖒𝖊!!"
 
 # Post text i.e. the final message
 
-PONG_TEXT = os.environ.get("PONG_TEXT") or "𝔑𝔬𝔴, 𝔏𝔢𝔱 𝔗𝔥𝔢 𝔊𝔞𝔪𝔢 𝔅𝔢𝔤𝔦𝔫!!"
+PONG_TEXT = os.environ.get("PONG_TEXT") or "𝕹𝖔𝖜 𝖑𝖊𝖙𝖘 𝖙𝖍𝖊 𝖌𝖆𝖒𝖊 𝖇𝖊𝖌𝖎𝖓!!"
 
 # Custom mention line
 
-PING_MENTION = os.environ.get("PING_MENTION") or "ℜ𝔲𝔩𝔢𝔰 𝔅𝔶"
+PING_MENTION = os.environ.get("PING_MENTION") or "𝕽𝖚𝖑𝖊𝖘 𝕭𝖞"
 
 # Text after the ping value
 
-PING_PARTNER = os.environ.get("PING_PARTNER") or "𝔪𝔰"
+PING_PARTNER = os.environ.get("PING_PARTNER") or "𝖒𝖘"
 
 # average ping header
 
-AVG_TEXT = os.environ.get("AVG_TEXT") or "𝔄𝔳𝔢𝔯𝔞𝔤𝔢 𝔓𝔬𝔫𝔤!"
+AVG_TEXT = os.environ.get("AVG_TEXT") or "𝕬𝖛𝖊𝖗𝖆𝖌𝖊 𝖕𝖔𝖓𝖌!"
 
 # ================================================
 
