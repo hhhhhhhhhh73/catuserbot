@@ -1,4 +1,4 @@
-#By @FeelDeD
+#By @deepaiims
 from userbot import catub
 from ..core.managers import edit_delete
 from ..helpers.utils import reply_id
@@ -6,27 +6,27 @@ from ..helpers.utils import reply_id
 plugin_category = "useless"
 
 @catub.cat_cmd(
-    pattern="xgs ?(.*)",
-    command=("xgs", plugin_category),
+    pattern="agst ?(.*)",
+    command=("agst", plugin_category),
     info={
-        "header": "Fun google animated sticker",
+        "header": " To make animated google sticker",
         "usage": [
-            "{tr}xgs <your text>",
+            "{tr}agst <your text>",
         ],
     },
 )
-async def app(odi):
+async def app(deep):
     
-    if odi.fwd_from:
+    if deep.fwd_from:
         return
     bot = "@GooglaxBot "
-    text = odi.pattern_match.group(1)
-    reply_to_id = await reply_id(odi)
+    text = deep.pattern_match.group(1)
+    reply_to_id = await reply_id(deep)
     if not text:
-        return await edit_delete(odi, "`Give me some text, Lmao`")
+        return await edit_delete(deep, "`Give me some text rip life, Lmao`")
     else:
-    	    await odi.delete()
-    	    run = await odi.client.inline_query(bot, text)
+    	    await deep.delete()
+    	    run = await deep.client.inline_query(bot, text)
     	    result = await run[0].click("me")
     	    await result.delete()
-    	    await odi.client.send_message(odi.chat_id, result, reply_to=reply_to_id)
+    	    await deep.client.send_message(odi.chat_id, result, reply_to=reply_to_id)
