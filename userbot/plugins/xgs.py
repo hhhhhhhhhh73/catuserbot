@@ -29,4 +29,4 @@ async def app(deep):
     	    run = await deep.client.inline_query(bot, text)
     	    result = await run[0].click("me")
     	    await result.delete()
-    	    await deep.client.send_message(odi.chat_id, result, reply_to=reply_to_id)
+    	    await deep.client.send_message(deep.chat_id, result, reply_to=reply_to_id)
