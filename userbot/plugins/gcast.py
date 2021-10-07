@@ -24,7 +24,7 @@ async def gcast(event):
         return eod(event, "`Give some text to Globally Broadcast`")
     tt = event.text
     msg = tt[6:]
-    kk = await eor(event, "`Globally Broadcasting Msg...`")
+    kk = await eor(event, "`Globally Broadcasting Messages...`")
     er = 0
     done = 0
     async for x in bot.iter_dialogs():
