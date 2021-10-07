@@ -1,4 +1,4 @@
-# Modified by @kirito6969 for pepecat
+# Modified by @deepaiims
 # Very Dangerous Plugin!
 
 
@@ -47,13 +47,13 @@ async def gcast(event):
         "examples": "{tr}pcast Hello World!",
     },
 )
-async def gucast(event):
+async def gcast(event):
     xx = event.pattern_match.group(1)
     if not xx:
         return eod(event, "`Give some text to Globally Broadcast`")
     tt = event.text
     msg = tt[7:]
-    kk = await eor(event, "`Globally Broadcasting Msg...`")
+    kk = await eor(event, "`Globally Broadcasting Messages...`")
     er = 0
     done = 0
     async for x in bot.iter_dialogs():
