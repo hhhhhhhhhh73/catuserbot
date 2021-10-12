@@ -49,12 +49,12 @@ async def amireallyalive(event):
         ms = (end - start).microseconds / 1000
         cat_caption = f"**{CUSTOM_ALIVE_TEXT}**\n\n"
         cat_caption += f"┏━━━━━✦❘༻༺❘✦━━━━━┓\n"
-        cat_caption += f"┃**{EMOJI} 🐈 ʙɪʟʟɪ ᴠᴇʀꜱɪᴏɴ :** `{catversion}`\n"
-        cat_caption += f"┃**{EMOJI} ⚰️  ᴅᴇᴀᴅ ꜱɪɴᴄᴇ :** `{uptime}\n`"
-        cat_caption += f"┃**{EMOJI} 😎 ꜱᴇɴꜱᴇɪ :** {mention}\n"
-        cat_caption += f"┃**{EMOJI} 💻 ꜱᴛᴀᴛᴜꜱ :** `{check_sgnirts}`\n"
+        cat_caption += f"┃**{EMOJI} 🐈 बिल्ली वर्शन :** `{catversion}`\n"
+        cat_caption += f"┃**{EMOJI} ⚰️ मारे हुए :** `{uptime}\n`"
+        cat_caption += f"┃**{EMOJI} 😎 मास्टर :** {mention}\n"
+        cat_caption += f"┃**{EMOJI} 💻 स्टेटस :** `{check_sgnirts}`\n"
         cat_caption += f"┗━━━━━✦❘༻༺❘✦━━━━━┛\n"
-        cat_caption += f"┏━━━━━✦❘༻༺❘✦━━━━━┓\n┃ ⁭⁫**{EMOJI} 📡 ᴘɪɴɢ :** {ms} ms \n┗━━━━━✦❘༻༺❘✦━━━━━┛\n"
+        cat_caption += f"┏━━━━━✦❘༻༺❘✦━━━━━┓\n┃ ⁭⁫**{EMOJI} 📡 पिंग :** {ms} ms \n┗━━━━━✦❘༻༺❘✦━━━━━┛\n"
         cat_caption += f"↠━━━━ღ◆ღ━━━━↞\n"
         cat_caption += f"**{EMOJI} 💙 ᴄʀᴇᴅɪᴛs ᴛᴏ ᴄʀᴇᴀᴛᴏʀs ᴏғ ᴄᴀᴛʙᴏᴛs & sᴜᴘᴘᴏʀᴛᴇʀs** \n"
         await event.client.send_file(
