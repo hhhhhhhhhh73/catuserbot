@@ -1,5 +1,5 @@
-#Kang With Credits Developed By @P_4_PEEYUSH
-#Modified By @D3_krish for mafiabot
+#By @deepaiims
+#Modified By @deepaiims for catbot
 #Two Word For Kangers without Credit 
 #you are madherchod & BHENCHOD
 
