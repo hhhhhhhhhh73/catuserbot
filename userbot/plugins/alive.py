@@ -26,7 +26,7 @@ start = datetime.now()
     pattern="alive$",
     command=("alive", plugin_category),
     info={
-        "header": "To check bot's alive status, Plugin by [∞](https://t.me/Infinity20998),[Λｙａｎ](https://t.me/not_ayan)",
+        "header": "To check bot's alive status, Plugin by [Deepjit Das](https://t.me/deepaiims)",
         "options": "To show media in this cmd you need to set ALIVE_PIC with media link, get this by replying the media by .tgm",
         "usage": [
             "{tr}alive",
